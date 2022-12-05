@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Technical Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <div>
+            <header>Java Documentation</header>
+            <ul>
+                <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                <li><a class="nav-link" href="#What_you_should_know">What you should know</a></li>
+                <li><a class="nav-link" href="#Hello_World!">Hello World!</a></li>
+                <li><a class="nav-link" href="#Variables">Variables</a></li>
+                <li><a class="nav-link" href="#Declaring_Variables">Declaring Variables</a></li>
+                <li><a class="nav-link" href="#Initializing_Variables">Initializing Variables</a></li>
+                <li><a class="nav-link" href="#Comments">Comments</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>Java is a general purpose object oriented programming language. It's a language that has been around since 1995 and has withstood the test of time as one of the best programming languages out there. It's statically typed and has a standard library with classes for basic needs (i.e. for mathematical operations).</p>
+                <p>It can be used to make GUI applications with the <a href="https://en.wikipedia.org/wiki/Swing_(Java)">swing library</a>, web apps with the <a href="https://spring.io/projects/spring-framework">spring framework</a>, android apps and many more.</p>
+                <p>One of it's standout features is how java code is executed. Unlike some languages java code is first compiled to byte code and then able to be run on any device that has a JRE (Java RunTime Environment) set up, which spawned the saying "Write once, run anywhere".</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="What_you_should_know">
+            <header>What you should know</header>
+            <article>
+                <p>To follow along with this documentation it is recommended you have at least some level of experience with programming due to it not going too deep into certain concepts, just the syntax behind them.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Hello_World!">
+            <header>Hello World!</header>
+            <article>
+                <p>To even start writing any Java code the first thing we need to do is set up a JDK or use an online java compiler like <a href="https://replit.com/">Replit</a>, in my case I will be using it.</p>
+                <code>class Main {  
+    public static void main(String[] args) { 
+        System.out.println("Hello World!"); 
+    } 
+}                </code>
+                <p>The example above shows a simple "Hello World!" program in Java. Like it was mentioned earlier Java is a object oriented language which means even for things such as this we first need to create a Main class, which inside of itself will have a static main method which will be called when the code needs to be executed.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <article>
+                <p>Variables represent places in memory where we store values we intend to use later.</p>
+                <p>There a few rules to follow when naming our variables:</p>
+                <ul>
+                    <li>The name of a variable can't start with a number, names like "3var" are invalid and will cause a compilation error</li>
+                    <li>The name of a variable can't contain the character "-", names like "three-three" are invalid and will cause a compilation error</li>
+                    <li>The names of variables can't repeat in the same scope</li>
+                    <li>The names of variables can't contain characters foreign to the english alphabet</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Declaring_Variables">
+            <header>Declaring Variables</header>
+            <article>
+                <p>Declaring variables means to give the variable a type and a name.</p>
+                <p>In Java variable declaration requires us to specify a few things:</p>
+                <br>
+                <p><strong>variableType variableName;</strong></p>
+                <br>
+                <p>variableType - represents the type of the variable and can be one of many Java offers (i.e. int, double, char...)</p>
+                <p>variableName - represents the name with which we will call the variable later on in our code.</p>
+                <br>
+                <p>In the example below we can see some variable declaration </p>
+                <br>
+                <code>class Main {  
+public static void main(String[] args) { 
+        int age;
+                
+        char sign;
+                    
+        double payCheck;
+                    
+        boolean hasJob;
+                    
+        String name;
+    } 
+}</code>
+                <br>
+                <p>Above we can also see some example of Java data types, and their uses are:</p>
+                <ul>
+                    <li><strong>int</strong> - int or integer is the data type used to represent whole numbers</li>
+                    <li><strong>char</strong> - char or character is the data type used to represent single characters</li>
+                    <li><strong>double</strong> - double is the data type used to represent decimal numbers</li>
+                    <li><strong>String</strong> - string is the data type used to represent multiple characters</li>
+                </ul>
+            </article>
+
+        <section class="main-section" id="Initializing_Variables">
+            <header>Initializing Variables</header>
+            <article>
+                <p>Initializing variables means to give the variable a type, a name and a value.</p>
+                <p>In Java variable initialization requires us to specify a few things in addition to our previous declaration step:</p>
+                <br>
+                <p><strong>variableType variableName = variableValue;</strong></p>
+                <br>
+                <p>variableValue - represent the value we give to our variable, it has to be the same type as the variableType</p>
+                <br>
+                <p>In the example below we can see some variable initialization:</p>
+                <br>
+                <code>class Main {  
+public static void main(String[] args) { 
+        int age = 18;
+
+        char sign = 'X';
+
+        double payCheck = 1200.50;
+
+        boolean hasJob = true;
+
+        String name = "Bob";
+    } 
+}</code>
+            </article>
+        </section>
+
+        <section class="main-section" id="Comments">
+            <header>Comments</header>
+            <article>
+                <p>Comments in programming are used to give additional information about a line or a few lines of code.</p>
+                <p>We have single line comments and multi-line comments, below we have examples of how to write both:</p>
+                <br>
+                <p>Single line comments:</p>
+                <code>class Main {  
+public static void main(String[] args) { 
+        // This is a single line comment
+    } 
+}</code>
+                <br>
+                <p>Multi-lined comments:</p>
+                <code>class Main {  
+public static void main(String[] args) { 
+        /*
+            This 
+            is 
+            a 
+            multi-line 
+            comment
+        */
+    } 
+}</code>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

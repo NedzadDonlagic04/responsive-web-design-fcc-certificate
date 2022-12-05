@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">Imaginary HighSchool Survey Form</h1>
+            <p id="description">In this form you'll answer questions which will help us improve your everyday experience</p>
+        </header>
+        <form id="survey-form">
+            <label for="name" id="name-label">Name</label>
+            <input id="name" type="text" placeholder="Enter your name:" required>
+    
+            <label for="email" id="email-label">Email</label>
+            <input id="email" type="email" placeholder="Enter your email:" required>
+    
+            <label for="age" id="number-label">Age</label>
+            <input id="number" type="number" placeholder="Enter your age:" min="14" max="20">
+    
+            <label for="dropdown">Gender</label>
+            <select name="dropdown" id="dropdown">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+    
+    
+            <label for="radio-options" class="radio-label">Would you recommend a friend going to our highschool</label>
+            <div id="radio-options" class="radio-options">
+                <div class="radio-option">
+                    <input type="radio" name="name" id="radio-yes" value="Yes">
+                    <label for="radio-yes">Yes</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="name" id="radio-maybe" value="Maybe">
+                    <label for="radio-maybe">Maybe</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="name" id="radio-no" value="No">
+                    <label for="radio-no">No</label>
+                </div>
+            </div>
+    
+            <label for="checkbox-options">What subjects have you enjoyed</label>
+            <div id="checkboxes" class="checkbox-options">
+                <div class="checkbox-option">
+                    <input type="checkbox" name="english" id="english" value="english">
+                    <label for="english">English</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" name="mathematics" id="mathematics" value="mathematics">
+                    <label for="mathematics">Mathematics</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" name="history" id="history" value="history">
+                    <label for="history">History</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" name="geography" id="geography" value="geography">
+                    <label for="geography">Geography</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" name="pe" id="pe" value="pe">
+                    <label for="pe">PE</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" name="german" id="german" value="german">
+                    <label for="german">German</label>
+                </div>
+            </div>
+    
+            <label for="comment">Your thoughts and suggestions</label>
+            <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Enter your comment here"></textarea>
+    
+            <button id="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

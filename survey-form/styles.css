@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+:root {
+    --bg-overlay: hsla(209, 80%, 10%, .5);
+    --bg-overlay-2: hsla(214, 100%, 10%, .5);
+    --bg-content: hsla(0, 100%, 0%, .6);
+}
+
+html {
+    font-size: 16px;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-overlay);
+    background-image: linear-gradient(to right, var(--bg-overlay), var(--bg-overlay-2)), url('https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+header > h1 {
+    font-size: 3rem;
+}
+
+header > p {
+    margin-top: .6rem;
+    font-size: 1.1rem;
+}
+
+.container {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 3rem;
+}
+
+.container,
+.container > form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container > form {
+    background-color: var(--bg-content);
+    padding: 2rem;
+    align-items: flex-start;
+    border-radius: 5px;
+    width: 100%;
+}
+
+label {
+    user-select: none;
+    padding: .5rem;
+    padding-left: 0;
+    font-size: 1.2rem;
+}
+
+label + input,
+label + select {
+    height: 1.8rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding-left: .5rem;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    font-size: 1rem;
+}
+
+input,
+textarea,
+select,
+option,
+button {
+    color: black;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: black;
+}
+
+.radio-label {
+    margin-top: 1rem;
+}
+
+.radio-options,
+.checkbox-options {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.radio-options > .radio-option:nth-child(1),
+.checkbox-options > .checkbox-option:nth-child(1) {
+    margin-top: 0;
+}
+
+.radio-option,
+.checkbox-option {
+    margin-top: .5rem;
+}
+
+.radio-options + label,
+.checkbox-options + label {
+    margin-top: .8rem;
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    margin: 2rem auto .5rem auto;
+    height: 2rem;
+    width: 5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: none;
+    padding: .3rem;
+    outline: none;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.submit-btn:hover {
+    outline: .3rem solid hsla(0, 100%, 100%, .9);
+}

@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --body-bg-color: #ccc;
+    --btn-normal-bg-color: hsl(50, 100%, 50%);
+    --btn-hover-bg-color: hsl(40, 100%, 50%);
+    --light-gray: hsl(0, 1%, 71%);
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--body-bg-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--body-bg-color);
+}
+
+.brand {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.logo {
+    min-width: 90px;
+    min-height: 90px;
+    width: 90px;
+    height: 90px;
+}
+
+#header-img {
+    width: 100%;
+}
+
+#nav-bar {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#form {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form > label {
+    margin: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+#email {
+    padding: .5rem;
+    font-size: 1.1rem;
+}
+
+.yellow-button {
+    padding: .5rem;
+    margin: 1.5rem;
+
+    cursor: pointer;
+    width: 200px;
+    outline: none;
+    background-color: var(--btn-normal-bg-color);
+
+    border-radius: 5px;
+    border: 3px solid black;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    transition: background-color .5s;
+}
+
+.yellow-button:hover {
+    background-color: var(--btn-hover-bg-color);
+}
+
+.features {
+    margin: 0 auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.feature-description {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.video-container {
+    width: 100%;
+    height: 300px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container > iframe {
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+}
+
+.prices {
+    margin: 2rem auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price {
+    width: clamp(200px, 300px, 400px);
+    height: clamp(300px, 400px, 500px);
+    border: 3px solid black;
+}
+
+.price div {
+    width: 100%;
+    height: 20%;
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.price-2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.price .description {
+    background-color: var(--body-bg-color);
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.description > p {
+    margin: .5rem 0;
+}
+
+.description > button {
+    margin-bottom: -1rem;
+}
+
+.money {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 850px) {
+    #header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brand {
+        justify-content: center;
+    }    
+
+    #nav-bar {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .prices {
+        flex-direction: column;
+    }
+
+    .price {
+        margin: 1rem 0;
+    }
+}
